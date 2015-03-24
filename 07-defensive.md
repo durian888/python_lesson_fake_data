@@ -452,6 +452,23 @@ we'd be writing up our results and moving on to the next program.
 In practice,
 scientists tend to do the following:
 
+0.  *Create and test with artificial data*
+	While we write our program, we should create artifical data that mimics 
+	our expected real data but exaggerates the features we wish to detect. By doing
+	this, we have a way of validating that our program is actually performing the 
+	processing we want as the exaggerated features should show a strong response
+	in the programs output. We need to create a range of artifical data so that we can 
+	confirm that our program correctly responds to a range of different inputs. 
+	Additionally we should create "null data" that consist of only noise so
+	we can check that that the program does not produce false postives. 
+	Artifical data can be made by a range of methods ranging from injecting artifical 
+	signals into your experimental setup to data generated entirely in software.  
+	If, when tested with artifical data, our program, fails to perform as expected 
+	we need first to confirm the validity of the artificial data before investigating 
+	why our program is not behaving as expected. After being well tested, a set of
+	artifical data becomes a valuable asset as it can be used to repeatedly validate a
+	program as it evolves over time. 
+
 1.  *Test with simplified data.*
     Before doing statistics on a real data set,
     we should try calculating statistics for a single record,
